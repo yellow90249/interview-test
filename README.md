@@ -16,9 +16,10 @@ npm run serve
 
 輸入路徑 `/books` 到書本列表
 
-本專案有放在 Netifly 上 : https://garysproject.netlify.app/books
+若起不來，嘗試把 `package-lock.json` 和 `node_modules` 都刪掉再從頭試一次
 
-補充 : 若起不來，嘗試把 `package-lock.json` 和 `node_modules` 都刪掉再從頭試一次。
+本專案有放在 Netifly 上 https://garysproject.netlify.app/books 做測試
+
 
 ## 專案的架構、邏輯說明
 
