@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <div class="page-header flex-test">
-      <span class="material-symbols-outlined plus-btn hidden"> add </span>
+      <span class="material-symbols-outlined action-btn hidden"> add </span>
       <h1 class="page-title">書本列表</h1>
-      <span class="material-symbols-outlined plus-btn" @click="goAddPage"> add </span>
+      <span class="material-symbols-outlined action-btn" @click="goAddPage"> add </span>
     </div>
 
     <div class="grid--2x3x4">

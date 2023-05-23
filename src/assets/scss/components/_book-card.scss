@@ -40,3 +40,9 @@
   margin-bottom: 40px;
   min-height: 18px;
 }
+
+@media (min-width: 576px) {
+  .card--icon  {
+    height: 150px;
+  }
+}

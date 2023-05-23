@@ -5,7 +5,9 @@ body {
 }
 
 h1,
-p {
+p,
+textarea {
   color: $color-secondary;
   margin: 0;
+  line-height: 1.4;
 }

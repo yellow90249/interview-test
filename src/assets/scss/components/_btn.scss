@@ -1,0 +1,40 @@
+.btn-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 360px;
+  margin: auto;
+}
+
+.outline-btn {
+  background-color: $color-background;
+  border-radius: 4px;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  outline: none;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $color-primary;
+    color: #fff;
+  }
+}
+
+.solid-btn {
+  background-color: $color-primary;
+  border-radius: 4px;
+  color: #fff;
+  border: 1px solid $color-primary;
+  outline: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+@media (min-width: 576px) {
+  .btn-wrapper {
+    margin-right: 0;
+  }
+}

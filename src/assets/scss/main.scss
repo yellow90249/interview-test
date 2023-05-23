@@ -6,12 +6,14 @@
 
 // Layout
 @import './layout/container';
-@import './layout/flex';
 @import './layout/grid';
 
 // Components
 @import './components/page-header';
 @import './components/book-card';
+@import './components/material-input';
+@import './components/material-textarea';
+@import './components/btn';
 
 // Common
 @import './common/common';

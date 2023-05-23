@@ -1,3 +1,7 @@
 .hidden {
   visibility: hidden;
 }
+
+.not-touch {
+  pointer-events: none;
+}
