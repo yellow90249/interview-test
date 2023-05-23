@@ -4,12 +4,17 @@ const routes = [
   {
     path: '/books',
     name: 'list',
-    component: () => import('../views/ListView.vue'),
+    component: () => import('../views/BookListView.vue'),
+  },
+  {
+    path: '/books/add',
+    name: 'add',
+    component: () => import('../views/BookAddView.vue'),
   },
   {
     path: '/books/:bookId',
     name: 'detail',
-    component: () => import('../views/DetailView.vue'),
+    component: () => import('../views/BookDetailView.vue'),
   },
 ];
 

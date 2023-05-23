@@ -3,7 +3,25 @@
 }
 
 .plus-btn {
-  font-size: 40px;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
   color: #42b983;
   cursor: pointer;
+  box-shadow: $box-shadow;
+  background-color: #fff;
+  transition: all 0.3s;
+  border-radius: 4px;
+  height: 36px;
+  width: 36px;
+
+  &:hover {
+    box-shadow:0 6px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+}
+
+@media (min-width: 576px) {
+  .plus-btn {
+    width: 100px;
+  }
 }

@@ -9,9 +9,7 @@
 
 <script setup>
 // eslint-disable-next-line no-undef
-const props = defineProps({
+defineProps({
   book: Object,
 });
-
-console.log(props);
 </script>
