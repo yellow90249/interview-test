@@ -53,7 +53,7 @@
 
     <div class="btn-wrapper" v-show="isEditMode">
       <button class="outline-btn" @click="isEditMode = false">取消</button>
-      <button class="outline-btn" @click="updateBookAPI($route.params.bookId, book)">修改</button>
+      <button class="outline-btn" @click="updateBook($route.params.bookId, book)">修改</button>
     </div>
   </div>
 </template>
@@ -62,6 +62,7 @@
 import { ref, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { getBookAPI, updateBookAPI } from '@/js/bookAPI';
+import { successToast, errorToast } from '@/js/alert';
 
 const route = useRoute();
 const router = useRouter();
@@ -79,5 +80,14 @@ onMounted(async () => {
 
 function goListPage() {
   router.push({ name: 'list' });
+}
+
+function updateBook(bookId, book) {
+  updateBookAPI(bookId, book)
+    .then(() => {
+      successToast('新增成功');
+      goListPage();
+    })
+    .catch(() => errorToast('新增失敗'));
 }
 </script>

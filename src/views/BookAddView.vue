@@ -30,7 +30,7 @@
 
     <div class="btn-wrapper">
       <button class="outline-btn" @click="goListPage">取消</button>
-      <button class="outline-btn" @click="addBookListAPI(book)">修改</button>
+      <button class="outline-btn" @click="addBookList(book)">新增</button>
     </div>
   </div>
 </template>
@@ -39,6 +39,7 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { addBookListAPI } from '@/js/bookAPI';
+import { successToast, errorToast } from '@/js/alert';
 
 const router = useRouter();
 
@@ -46,5 +47,14 @@ const book = ref({ title: '', author: '', description: '' });
 
 function goListPage() {
   router.push({ name: 'list' });
+}
+
+function addBookList(book) {
+  addBookListAPI(book)
+    .then(() => {
+      successToast('新增成功');
+      goListPage();
+    })
+    .catch(() => errorToast('新增失敗'));
 }
 </script>
