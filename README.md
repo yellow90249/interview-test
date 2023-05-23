@@ -1,24 +1,22 @@
-# interview-test
+# UNNOTECH 測驗 by Gary
 
-## Project setup
+## 執行專案
+
+拉下來後安裝依賴
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+再啟動本地 server
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+輸入路徑 `/books` 到書本列表
 
-### Lints and fixes files
-```
-npm run lint
-```
+補充 : 若起不來，嘗試把 `package-lock.json` 和 `node_modules` 都刪掉在從頭裝一次看看
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 專案的架構、邏輯說明
+![](assets/img/架構.png)
