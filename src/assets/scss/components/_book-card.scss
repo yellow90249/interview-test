@@ -1,0 +1,42 @@
+.book-card {
+  box-shadow: $box-shadow;
+  background: #fff;
+  border-radius: 4px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: $box-shadow--hover;
+  }
+}
+
+.card--icon {
+  font-size: 40px;
+  display: grid;
+  height: 100px;
+  place-items: center;
+  color: $color-secondary;
+}
+
+.card--title {
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  min-height: 18px;
+}
+
+.card--author {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  margin-bottom: 40px;
+  min-height: 18px;
+}
