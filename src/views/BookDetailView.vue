@@ -85,9 +85,9 @@ function goListPage() {
 function updateBook(bookId, book) {
   updateBookAPI(bookId, book)
     .then(() => {
-      successToast('新增成功');
+      successToast('修改成功');
       goListPage();
     })
-    .catch(() => errorToast('新增失敗'));
+    .catch(() => errorToast('修改失敗'));
 }
 </script>
