@@ -12,17 +12,33 @@
       </span>
     </div>
 
-    <div class="input-wrapper" :class="{ 'not-touch': !isEditMode }">
-      <input class="input" v-model="book.title" type="text" placeholder=" " data-placeholder="E-mail" required />
+    <div class="input-wrapper">
+      <input
+        class="input"
+        v-model="book.title"
+        type="text"
+        placeholder=" "
+        data-placeholder="E-mail"
+        required
+        :disabled="!isEditMode"
+      />
       <span class="placeholder">名稱</span>
     </div>
 
-    <div class="input-wrapper" :class="{ 'not-touch': !isEditMode }">
-      <input class="input" v-model="book.author" type="text" placeholder=" " data-placeholder="E-mail" required />
+    <div class="input-wrapper">
+      <input
+        class="input"
+        v-model="book.author"
+        type="text"
+        placeholder=" "
+        data-placeholder="E-mail"
+        required
+        :disabled="!isEditMode"
+      />
       <span class="placeholder">作者</span>
     </div>
 
-    <div class="input-wrapper" :class="{ 'not-touch': !isEditMode }">
+    <div class="input-wrapper">
       <textarea
         class="input input--big"
         v-model="book.description"
@@ -30,6 +46,7 @@
         placeholder=" "
         data-placeholder="E-mail"
         required
+        :disabled="!isEditMode"
       ></textarea>
       <span class="placeholder">備註</span>
     </div>
