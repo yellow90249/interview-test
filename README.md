@@ -32,6 +32,10 @@ npm run serve
 
 本專案盡量遵守 Material Design 和 8px Layout。
 
+### js 資料夾
+
+這裡放第三方庫或者是公共函數。
+
 ### views 資料夾 / components 資料夾
 
 views 內的檔案會映射到路由上，本專案有 3 個路由分別是 : `list`、`add`、`detail`，所以 views 內也有對應的三個文件。
