@@ -38,7 +38,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { addBookListAPI } from '@/js/bookAPI';
+import { addBookAPI } from '@/js/bookAPI';
 import { successToast, errorToast } from '@/js/alert';
 
 const router = useRouter();
@@ -50,7 +50,7 @@ function goListPage() {
 }
 
 function addBookList(book) {
-  addBookListAPI(book)
+  addBookAPI(book)
     .then(() => {
       successToast('新增成功');
       goListPage();

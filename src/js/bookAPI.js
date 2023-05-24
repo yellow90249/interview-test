@@ -10,7 +10,7 @@ export function getBookAPI(bookId) {
   return axios.get(`books/${bookId}`);
 }
 
-export function addBookListAPI(book) {
+export function addBookAPI(book) {
   return axios.post('books', book);
 }
 
