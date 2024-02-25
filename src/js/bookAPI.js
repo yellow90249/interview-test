@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://fe-interview-api.unnotech.com';
+axios.defaults.baseURL = 'http://localhost:80/api';
 
 export function getBookListAPI() {
   return axios.get('books');
@@ -18,4 +18,6 @@ export function updateBookAPI(bookId, book) {
   return axios.patch(`books/${bookId}`, book);
 }
 
-export function deleteBookAPI() {}
+export function deleteBookAPI(bookId) {
+  return axios.delete(`books/${bookId}`);
+}

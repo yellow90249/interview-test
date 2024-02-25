@@ -3,13 +3,22 @@
     <div class="page-header flex-test">
       <span class="material-symbols-outlined prev-btn" @click="goListPage"> arrow_back_ios </span>
       <h1 class="page-title">{{ staticTitle }}</h1>
-      <span
-        class="material-symbols-outlined edit-btn"
-        :class="{ hidden: isEditMode, 'not-touch': isEditMode }"
-        @click="isEditMode = !isEditMode"
-      >
-        edit_square
-      </span>
+      <div>
+        <span
+          class="material-symbols-outlined edit-btn"
+          :class="{ hidden: isEditMode, 'not-touch': isEditMode }"
+          @click="isEditMode = !isEditMode"
+        >
+          edit_square
+        </span>
+        <span
+          class="material-symbols-outlined delete-btn"
+          :class="{ hidden: isEditMode, 'not-touch': isEditMode }"
+          @click="deleteBook(staticTitle)"
+        >
+          delete
+        </span>
+      </div>
     </div>
 
     <div class="input-wrapper">
@@ -61,8 +70,9 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { getBookAPI, updateBookAPI } from '@/js/bookAPI';
+import { getBookAPI, updateBookAPI, deleteBookAPI } from '@/js/bookAPI';
 import { successToast, errorToast } from '@/js/alert';
+import Swal from 'sweetalert2';
 
 const route = useRoute();
 const router = useRouter();
@@ -89,5 +99,24 @@ function updateBook(bookId, book) {
       goListPage();
     })
     .catch(() => errorToast('修改失敗'));
+}
+
+function deleteBook(book) {
+  Swal.fire({
+    title: `刪除 ${book}`,
+    width: 300,
+    showCancelButton: true,
+    confirmButtonColor: '#42b983',
+    cancelButtonColor: '#eb4d4b',
+    confirmButtonText: '確認',
+    cancelButtonText: '取消',
+  }).then((result) => {
+    if (result.isConfirmed) {
+      deleteBookAPI(bookId).then(() => {
+        successToast('刪除成功');
+        goListPage();
+      });
+    }
+  });
 }
 </script>

@@ -29,8 +29,8 @@
     </div>
 
     <div class="btn-wrapper">
-      <button class="outline-btn" @click="goListPage">取消</button>
       <button class="outline-btn" @click="addBookList(book)">新增</button>
+      <button class="outline-btn" @click="goListPage">取消</button>
     </div>
   </div>
 </template>

@@ -7,7 +7,7 @@
     </div>
 
     <div class="grid--2x3x4">
-      <BookCard v-for="book in bookList" :key="book.id" :book="book" @click="goDetailPage(book.id)"></BookCard>
+      <BookCard v-for="book in bookList" :key="book._id" :book="book" @click="goDetailPage(book._id)"></BookCard>
     </div>
   </div>
 </template>
