@@ -2,17 +2,17 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
-    path: '/books',
+    path: '/',
     name: 'list',
     component: () => import('../views/BookListView.vue'),
   },
   {
-    path: '/books/add',
+    path: '/add',
     name: 'add',
     component: () => import('../views/BookAddView.vue'),
   },
   {
-    path: '/books/:bookId',
+    path: '/edit/:bookId',
     name: 'detail',
     component: () => import('../views/BookDetailView.vue'),
   },
